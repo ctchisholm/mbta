@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <!--
+            Style Sheets
+        -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <!--
+            Javascript includes.  3rd party only, see app.js below for source file information
+        -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <!--
+            APP.JS:
+
+            SEE gulpfile.js in root.  Gulp is used to combine all source .js files into our app.js
+            file, so we only need to include one file that represents our source js files, instead
+            of a file for every single one.
+         -->
+        <script src="app.js"></script>
+    </head>
+
+    <body ng-app="departures">
+
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">MBTA Departures</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="departures">Departures</a></li>
+                <li><a ui-sref="about">About</a></li>
+            </ul>
+        </nav>
+
+        <div ui-view></div>
+
+        </div>
+
+    </body>
+
+
+</html>
