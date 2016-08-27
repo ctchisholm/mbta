@@ -10,7 +10,7 @@ gulp.task('js', function () {
 		.pipe(concat('app.js'))
 		//.pipe(ngAnnotate())
 		//.pipe(uglify())
-		//.pipe(sourcemaps.write())
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest('_public/'))
 });
 
