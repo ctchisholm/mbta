@@ -3,6 +3,11 @@
     <h2>Train Departures</h2>
     <h4>Last Updated: {{lastUpdated}}</h4>
     <hr>
+
+    <stackable-table headers="{{departures[0]}}" columns="{{departures}}">
+
+    <hr>
+
     <div class="row">
         <div class="col-md-1" ng-repeat="(key, val) in departures[0]">
             {{key}}
@@ -12,7 +17,8 @@
         <div class="col-md-1" ng-repeat="(key, val) in d">
             {{val}}
         </div>
-
     </div>
+
+
 
 </section>

@@ -2,6 +2,8 @@
 angular.module('departures')
 .controller('departureCtrl', function($scope,departureSvc){
 
+	$scope.header = 2;
+
 	departureSvc.getDepartures().then(
 		function success(res){
 			if(res.data.length > 0)
